@@ -59,6 +59,7 @@ export default async function isAuthentication() {
 
 export async function isAuthenticated(): Promise<boolean> {
 	const cookieStore = await cookies();
-	const refreshToken = cookieStore.get("refresh")?.value;
+    const refreshToken = cookieStore.get("refresh")?.value;
+    
 	return !!refreshToken; 
 }
