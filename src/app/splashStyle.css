@@ -1,0 +1,151 @@
+:root {
+  --bgColor: #125A71;
+  --drop: rgb(255, 255, 255);
+  --main: #ffffff;
+}
+
+#welcome_logo{
+    overflow: hidden; width: screen; height: screen; position: fixed; display: flex; justify-content: center; align-items: center;
+}
+.welcome{
+    display: flex; justify-content: center; align-items: center; overflow: hidden;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1.title,
+.footer-copyright a {
+  font-family: 'Architects Daughter', cursive;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* start welcome animation */
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+.welcome {
+  background: var(--bgColor);
+  overflow: hidden !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+.welcome #welcome {
+  background: var(--drop);
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards, hide 5s 2.9s ease forwards;
+}
+.welcome #welcome_logo img{
+  opacity: 0;
+  animation: Fadein 2s 2.8s ease-in-out forwards;
+}
+   
+
+
+@keyframes Fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes init {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 56px;
+    height: 56px;
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    background: var(--drop);
+    top: 100%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    /* width: 30%;
+    height: 30%; */
+    top: 50%;
+    background: var(--drop);
+    
+  }
+}
+
+@keyframes materia {
+  0% {
+    background: var(--main);
+  }
+  50% {
+    background: var(--main);
+    /* top: 26px; */
+  }
+  100% {
+    background: var(--main);
+    width: 3000px;
+    height: 3000px;
+    border-radius: 50%;
+    /* top: 26px; */
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+} 
