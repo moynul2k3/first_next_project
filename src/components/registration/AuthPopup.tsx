@@ -19,9 +19,15 @@ const AuthPopup = () => {
     const notLoggedInParam = searchParams.get('user');
     if (notLoggedInParam === '_authentication-required') {
       setIsPopupVisible(true);
+      document.body.style.overflow = 'hidden';
     } else {
       setIsPopupVisible(false);
+      document.body.style.overflow = '';
     }
+
+    return () => {
+      document.body.style.overflow = ''; // Cleanup on unmount
+    };
   }, [searchParams]); // Rerun effect when the searchParams change
 
   return (
