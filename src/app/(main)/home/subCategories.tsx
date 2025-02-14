@@ -11,13 +11,13 @@ export default async function subCategories() {
 	}));
 
 
-    const shuffledSubCategories = subCategory
-        .sort(() => Math.random() - 0.5) // Shuffle array
-        .slice(0, 16); // Slice the first 28 items
+    //const shuffledSubCategories = subCategory
+    //    .sort(() => Math.random() - 0.5) // Shuffle array
+    //    .slice(0, 16); // Slice the first 28 items
 	return (
 		<div className="z-0 py-10 pt-16 bg-[#1a1a1a] text-[#1a1a1a] h-auto max-md:px-4 md:px-8 lg:px-20 xl:px-32">
 			<p className="max-md:text-lg md:text-2xl m-0 p-0 font-semibold text-white">Popular Categories</p>
-			{ subCategory.length > 0 && <SubCategories Rows={ 2 } subCategories={ shuffledSubCategories } /> }
+			{ subCategory.length > 0 && <SubCategories Rows={ 2 } subCategories={ subCategory } /> }
 		</div>
 	)
 }
