@@ -16,7 +16,7 @@ export default function HeaderBg({children}: HeaderProps) {
 			};
 	}, [])
 	return (
-		<div id='Headerbg' className={ `${ isScrolled ? "bg-white text-black" : "bg-gradient-to-b from-black/70 to-transparent text-white" } Headerbg fixed top-0 w-full h-[6.5rem]  transition-all ease-in-out duration-300 z-40` }>
+		<div id='Headerbg' className={ `${ isScrolled ? "bg-white text-black shadow-md shadow-black/10" : "bg-gradient-to-b from-black/70 to-transparent text-white" } Headerbg fixed top-0 w-full md:h-[6.5rem] transition-all duration-100 z-40 ` }>
 			{ children }
 		</div>
 	);

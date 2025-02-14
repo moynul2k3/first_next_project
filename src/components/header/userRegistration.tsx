@@ -7,12 +7,12 @@ export default async function isAuthentication() {
 	const isLoggedIn = await isAuthenticated();
 
 	return (
-		<div className="flex justify-between p-4">
+		<div className=" flex justify-center items-center gap-2 bg-red-500 text-white hover:bg-red-700 max-md:w-8 md:w-36 max-md:h-8  md:h-10 rounded max-md:rounded-full ">
             { !isLoggedIn
                 ? <SigninSignup  />
-				:   <div className={` w-full px-2 py-1 flex flex-col justify-center items-center relative group hover:underline  rounded-md`}>
-                        <div className="flex justify-start items-center gap-2 cursor-pointer ">
-                            <div className="p-1 h-8 w-8 bg-white/20 rounded-full border-[1px] border-black/40 flex justify-center items-center">
+				:   <div className={`w-full px-2 py-1 flex flex-col justify-center items-center relative group  rounded-md`}>
+                        <div className="flex justify-center  items-center gap-2 cursor-pointer ">
+                            <div className="p-1 h-7 w-7 bg-white rounded-full border-[1px] border-black/40 flex justify-center items-center">
                                 <Image
                                     className=""
                                     src="/quanta.png"
@@ -21,11 +21,11 @@ export default async function isAuthentication() {
                                     height={40}
                                 />
                             </div>
-                            <div>
-                                <p className="font-thin line-clamp-1 text-md max-md:hidden">My account</p>
+                            <div className="max-md:hidden">
+                                <p className="font-thin line-clamp-1 text-md">My account</p>
                             </div>
                         </div>
-                        <div className={`absolute hidden md:group-hover:block h-80 w-72 transition-all ease-in-out duration-100 top-0 z-40 `}>
+                        <div className={`absolute hidden md:group-hover:block h-80 w-72 transition-all ease-in-out duration-100 -top-3 z-40 `}>
                             <div className={`profile h-full mt-[60px] w-full bg-white text-black/70 shadow-[inset_1px_1px_5px_#f006] rounded-md px-5 py-5 flex flex-col gap-6`}>
                                 <Link href="" className={`flex justify-start items-center gap-3  group/item`}>
                                     <i className='bx bx-smile text-[25px] font-thin'></i> 

@@ -9,7 +9,7 @@ const Popup: React.FC<PopupProps> = ({ isVisible, onClose, children }) => {
         return null;
     } else {
         return (
-        <div className="absolute top-0 left-0 h-screen w-screen flex justify-center items-center bg-black/10 backdrop-blur-sm z-50">
+        <div className="fixed top-0 left-0 h-screen w-screen flex justify-center max-md:items-end  md:items-center bg-black/10 backdrop-blur-sm z-50">
             <div className="w-auto h-auto bg-white rounded shadow-slate-400 shadow-md relative">
             {/* Close Button */}
             <button
@@ -18,7 +18,7 @@ const Popup: React.FC<PopupProps> = ({ isVisible, onClose, children }) => {
             >
                 <i className="bx bx-plus rotate-45 text-red-500"></i>
             </button>
-            <div>{children}</div>
+            <div className="max-md:flex max-md:items-start">{children}</div>
             </div>
         </div>
         );
