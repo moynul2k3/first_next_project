@@ -24,7 +24,7 @@ export default function SigninSignup() {
 	                'Content-Type': 'application/json',
 	            },
 	            body: JSON.stringify({ refresh: refreshToken }),
-	        });
+			});
 			if (response.ok) {
 				document.cookie = `access=; path=/;`;
 				document.cookie = `refresh=; path=/;`;
