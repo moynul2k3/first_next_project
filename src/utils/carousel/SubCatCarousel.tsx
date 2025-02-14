@@ -21,21 +21,6 @@ interface CarouselProps {
 const CatCarousel = ({ subCategories, Rows = 2 }: CarouselProps) => {
     const splideRef = useRef<HTMLDivElement>(null!);
     const [loading, setLoading] = useState(true);
-    const [itemsCount, setItemsCount] = useState(16);
-
-      // Function to update count based on screen width
-      const updateItemsCount = () => {
-        const width = window.innerWidth;
-        if (width <= 480) {
-          setItemsCount(3);  // Extra small screens
-        } else if (width <= 1024) {
-          setItemsCount(5);  // Small screens
-        } else if (width <= 1400) {
-          setItemsCount(8); // Medium screens
-        } else {
-          setItemsCount(10); // Large screens
-        }
-      };
 
     useEffect(() => {
         if (subCategories.length > 0) {
@@ -44,8 +29,6 @@ const CatCarousel = ({ subCategories, Rows = 2 }: CarouselProps) => {
     }, [subCategories]);
 
     useEffect(() => {
-        updateItemsCount(); 
-        window.addEventListener("resize", updateItemsCount);
         if (!splideRef.current) return;
 
         const splide = new Splide(splideRef.current, {
@@ -77,10 +60,7 @@ const CatCarousel = ({ subCategories, Rows = 2 }: CarouselProps) => {
 
         splide.mount({ Grid });
 
-        return () => {
-            splide.destroy();
-            window.removeEventListener("resize", updateItemsCount);
-        };
+        return () => {splide.destroy()};
     }, [loading, subCategories, Rows]);
 
     return (
@@ -89,7 +69,7 @@ const CatCarousel = ({ subCategories, Rows = 2 }: CarouselProps) => {
                 <div className=" mt-5">
                     <div className=" mt-3 mb-5">
                         <ul className="grid max-md:grid-cols-3 md:grid-cols-5 xl:grid-cols-8 grid-rows-2 gap-[10px]">
-                            {Array.from({ length: itemsCount }).map((_, index) => (
+                            {Array.from({ length: 6 }).map((_, index) => (
                                 <Skeleton key={index} className=" group max-md:h-[80px] md:h-[100px] xl:h-[150px] shadow-slate-700  bg-black/10 rounded shadow-md ">
                                     <div className="flex flex-col items-center justify-center h-full w-full" >
                                         <div className="h-[60px] w-full flex justify-center items-center">
