@@ -205,7 +205,7 @@ const SigninSignup: React.FC<SigninSignupProps> = ({onClose}) => {
     };
 
     return (
-        <div className="h-full max-md:w-screen max-md:pt-5 md:p-5 flex-1 bg-red-400/20 relative">
+        <div className="h-full max-md:w-screen max-md:pt-5 xl:p-5 flex-1 bg-red-400/20 relative">
             <form onSubmit={handleSubmit} className="px-5">
                 <div className="flex justify-between items-center md:mt-10">
                     <div className="text-xl font-semibold">
