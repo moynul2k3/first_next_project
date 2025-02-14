@@ -9,7 +9,7 @@ import Categories from './Categories';
 
 export default async function Header() {
 	return (
-		<Headerbg>
+		<Headerbg >
 			<header className='h-16 max-md:px-4 md:px-8 lg:px-20 xl:px-32 flex justify-between items-center gap-5'>
 				<Link href="/home" className="h-full w-auto flex justify-start items-center">
 					<Image

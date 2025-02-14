@@ -28,7 +28,7 @@ export default function SigninSignup() {
 			if (response.ok) {
 				document.cookie = `access=; path=/;`;
 				document.cookie = `refresh=; path=/;`;
-				return router.push("/");
+				return router.refresh()
 			};
 		} catch (error) {
 			console.error('Error refreshing access token:', error);

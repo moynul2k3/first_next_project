@@ -10,7 +10,7 @@ export default async function isAuthentication() {
 		<div className="flex justify-between p-4">
             { !isLoggedIn
                 ? <SigninSignup  />
-				: <div className={` w-full px-2 py-1 flex flex-col justify-center items-center relative group hover:underline  rounded-md`}>
+				:   <div className={` w-full px-2 py-1 flex flex-col justify-center items-center relative group hover:underline  rounded-md`}>
                         <div className="flex justify-start items-center gap-2 cursor-pointer ">
                             <div className="p-1 h-8 w-8 bg-white/20 rounded-full border-[1px] border-black/40 flex justify-center items-center">
                                 <Image

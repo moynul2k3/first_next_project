@@ -41,6 +41,9 @@ body {
   background: #fa6363e0;
 }
 
+#categoryItem:hover body {
+  background: #f00 !important;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;

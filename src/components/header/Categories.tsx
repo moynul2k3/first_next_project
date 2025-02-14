@@ -67,9 +67,9 @@ export default async function Categories() {
       <NavigationMenu>
           <Carousel className="w-[600px] me-16">
             <NavigationMenuList >
-              <CarouselContent className="">
+              <CarouselContent className="" >
                 {categories.map((category: { id: number; name: string; subcategories: { id: number; name: string; image: string }[] }) => (
-                    <CarouselItem key={category.id} className="basis-auto">
+                    <CarouselItem id="categoryItem" key={category.id} className="basis-auto">
                       <NavigationMenuItem >
                           <NavigationMenuTrigger className="select-none ">{category.name}</NavigationMenuTrigger>
                             <NavigationMenuContent>
