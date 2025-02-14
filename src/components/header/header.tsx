@@ -24,7 +24,6 @@ export default async function Header() {
 					<SearchBar />
 				</div>
 				<div className='flex justify-end items-center h-full w-auto gap-5 text-stone-400 '>
-					<Link href="/products">Products</Link>
 					<AuthUser />
 					<Link href="/" className="max-md:hidden">
 						<div className={`flex justify-between items-center gap-3 hover:underline   px-6 py-2 rounded-md`}>
