@@ -26,12 +26,12 @@ const CatCarousel = ({ subCategories, Rows = 2 }: CarouselProps) => {
       // Function to update count based on screen width
       const updateItemsCount = () => {
         const width = window.innerWidth;
-        if (width <= 1400) {
-          setItemsCount(8);  // Extra small screens
+        if (width <= 480) {
+          setItemsCount(3);  // Extra small screens
         } else if (width <= 1024) {
           setItemsCount(5);  // Small screens
-        } else if (width <= 480) {
-          setItemsCount(3); // Medium screens
+        } else if (width <= 1400) {
+          setItemsCount(8); // Medium screens
         } else {
           setItemsCount(10); // Large screens
         }
