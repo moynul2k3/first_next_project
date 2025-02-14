@@ -15,11 +15,11 @@ export interface SubCategoryData {
     image: string;
 }
 
-// export interface Products {
-//     id: number;
-//     name: string;
-//     image: string;
-// }
+export interface Products {
+    id: number;
+    name: string;
+    image: string;
+}
 
 
 // Helper function to fetch Banners data

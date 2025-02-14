@@ -19,11 +19,11 @@ export default function SigninSignup() {
 		setLoading(true);
 		try {
 			const response = await fetch(`${API_URL}/token/logout/`, {
-	            method: 'POST',
-	            headers: {
-	                'Content-Type': 'application/json',
-	            },
-	            body: JSON.stringify({ refresh: refreshToken }),
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ refresh: refreshToken }),
 			});
 			if (response.ok) {
 				document.cookie = `access=; path=/;`;
