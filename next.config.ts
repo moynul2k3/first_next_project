@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       ? [
           {
             protocol: "https",
-            hostname: "first-rest-api-flax.vercel.app",
+            hostname: "admin.dot95bd.com",
             // hostname: "first-next-project-smoky.vercel.app",
           },
         ]
