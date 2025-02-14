@@ -5,7 +5,7 @@ import {
     NavigationMenuItem,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
+    //navigationMenuTriggerStyle,
     NavigationMenuContent,
     // NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
@@ -54,15 +54,15 @@ export default async function Categories() {
   };
 
   return (
-      <div className="flex justify-between items-center max-md:px-4 md:px-8 lg:px-20 xl:px-32 max-md:hidden">
-        <NavigationMenu>
+      <div className="flex flex-row-reverse justify-center  items-center max-md:px-4 md:px-8 lg:px-20 xl:px-32 max-md:hidden">
+        {/*<NavigationMenu>
             <NavigationMenuList className="flex flex-nowrap overflow-x-auto w-auto">
                 <NavigationMenuItem className="bg-transparent">
                   <Link href="/home" scroll={true} className={navigationMenuTriggerStyle()}>Home</Link>
                   
                 </NavigationMenuItem>
             </NavigationMenuList>
-        </NavigationMenu>
+        </NavigationMenu>*/}
 
       <NavigationMenu>
           <Carousel className="w-[600px] me-16">
