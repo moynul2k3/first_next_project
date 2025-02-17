@@ -89,7 +89,7 @@ const CatCarousel = ({ subCategories, Rows = 2 }: CarouselProps) => {
                     <div className="splide__track mt-3 mb-5">
                         <ul className="splide__list">
                             {subCategories.map((subcat) => (
-                                <li key={subcat.id} className="splide__slide group max-md:h-[80px] md:h-[100px] xl:h-[150px] max-md:w-[80px] md:w-[100px] xl:w-[150px] bg-white rounded splide__slide group  hover:shadow-[-1px_0px_5px_#f00,1px_0px_5px_#f00] origin-center hover:rotate-6 transition ease-in-out delay-150">
+                                <li key={subcat.id} className="splide__slide group max-md:h-[80px] md:h-[100px] xl:h-[150px] max-md:w-[80px] md:w-[100px] xl:w-[150px] bg-white rounded splide__slide group hover:shadow-[-1px_0px_5px_#CC1554,1px_0px_5px_#6A4385] origin-center hover:rotate-6 transition ease-in-out delay-150">
                                     <Link
                                         href={`/product/filters?group=${subcat.id}&name=${encodeURIComponent(subcat.name)}`}
                                         className="flex flex-col items-center justify-center h-full w-full"

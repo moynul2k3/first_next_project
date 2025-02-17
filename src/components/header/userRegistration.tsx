@@ -7,12 +7,12 @@ export default async function isAuthentication() {
 	const isLoggedIn = await isAuthenticated();
 
 	return (
-		<div className=" flex justify-center items-center gap-2 bg-red-500 text-white hover:bg-red-700 max-md:w-8 md:w-10 xl:w-36 max-md:h-8  md:h-10 rounded max-xl:rounded-full ">
+		<div className=" flex justify-center items-center gap-2 bg-gradient_bg text-white hover:opacity-85  max-md:w-8 md:w-10 xl:w-36 max-md:h-8  md:h-10 rounded max-xl:rounded-full ">
             { !isLoggedIn
                 ? <SigninSignup  />
 				:   <div className={`w-full px-2 py-1 flex flex-col justify-center items-center relative group  rounded-md`}>
                         <div className="flex justify-center  items-center gap-2 cursor-pointer ">
-                            <div className="p-1 h-7 w-7 bg-white rounded-full border-[1px] border-black/40 flex justify-center items-center">
+                            <div className="p-1 max-xl:h-12 xl:h-7 max-xl:w-12 xl:w-7 max-xl:bg-gradient_bg xl:bg-white max-xl:rounded-md xl:rounded-full border-[1px] border-black/40 flex justify-center items-center">
                                 <Image
                                     className=""
                                     src="/quanta.png"

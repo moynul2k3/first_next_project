@@ -40,7 +40,7 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                 />
-                <button type="submit" className="bg-red-500 text-white h-full w-10 hover:bg-red-600 flex justify-center items-center gap-2 rounded-lg md:px-5 xl:px-14">
+                <button type="submit" className=" text-white h-full w-10 bg-gradient_bg hover:opacity-85 flex justify-center items-center gap-2 rounded-lg md:px-5 xl:px-14">
                     <i className='bx bx-search text-xl text-center' ></i>
                     <span className='max-xl:hidden'>Search</span>
                 </button>
