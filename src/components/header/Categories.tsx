@@ -34,7 +34,7 @@ const API_URL =
 export default async function Categories() {
   const res = await fetch(`${API_URL}/categories/`, {
     next: {
-      revalidate: 15,
+      revalidate: 30,
     },
   });
   if (!res.ok) throw new Error("Failed to fetch data");
@@ -42,7 +42,7 @@ export default async function Categories() {
   const categories = await res.json();
 
   const navCategoriesStyle = {
-    width: '600px',
+    width: '800px',
     height: 'auto',
     maxHeight: '300px',
     display: 'grid',
@@ -55,25 +55,16 @@ export default async function Categories() {
 
   return (
       <div className="flex flex-row-reverse justify-center  items-center max-md:px-4 md:px-8 lg:px-20 xl:px-32 max-md:hidden">
-        {/*<NavigationMenu>
-            <NavigationMenuList className="flex flex-nowrap overflow-x-auto w-auto">
-                <NavigationMenuItem className="bg-transparent">
-                  <Link href="/" scroll={true} className={navigationMenuTriggerStyle()}>Home</Link>
-                  
-                </NavigationMenuItem>
-            </NavigationMenuList>
-        </NavigationMenu>*/}
-
       <NavigationMenu className="">
-          <Carousel className=" me-16 w-[600px] max-xl:px-4">
-            <NavigationMenuList >
+          <Carousel className=" me-16 w-[800px] max-xl:px-4">
+            <NavigationMenuList className="w-[800px]">
               <CarouselContent className="" >
                 {categories.map((category: { id: number; name: string; subcategories: { id: number; name: string; image: string }[] }) => (
-                    <CarouselItem id="categoryItem" key={category.id} className="basis-auto">
-                      <NavigationMenuItem >
+                    <CarouselItem id="categoryItem" key={category.id} className="basis-auto ">
+                      <NavigationMenuItem className="">
                           <NavigationMenuTrigger className="select-none ">{category.name}</NavigationMenuTrigger>
-                            <NavigationMenuContent className="w-[800px]">
-                              <div  className="p-5" style={navCategoriesStyle}>
+                            <NavigationMenuContent className="">
+                              <div  className="p-5 flex justify-center items-start" style={navCategoriesStyle}>
                                   {category.subcategories.map((subcat) => (
                                       <Link href="/" key={subcat.id} className="flex justify-center items-center flex-col">
                                         <Avatar>
