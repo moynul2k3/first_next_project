@@ -54,7 +54,23 @@ const config: Config = {
                     "4": "hsl(var(--chart-4))",
                     "5": "hsl(var(--chart-5))",
 				},
-			},
+            },
+            screens: {
+                'sm': '460px',
+                // => @media (min-width: 640px) { ... }
+
+                'md': '720px',
+                // => @media (min-width: 640px) { ... }
+
+                'lg': '1080px',
+                // => @media (min-width: 1024px) { ... }
+
+                'xl': '1380px',
+                // => @media (min-width: 1280px) { ... }
+
+                'xxl': '1680px',
+                // => @media (min-width: 1280px) { ... }
+            },
 			backgroundImage: {
                 gradient_bg: "linear-gradient(-45deg, #6A4385, #CC1554)",
             },

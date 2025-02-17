@@ -58,7 +58,7 @@ export default async function Categories() {
         {/*<NavigationMenu>
             <NavigationMenuList className="flex flex-nowrap overflow-x-auto w-auto">
                 <NavigationMenuItem className="bg-transparent">
-                  <Link href="/home" scroll={true} className={navigationMenuTriggerStyle()}>Home</Link>
+                  <Link href="/" scroll={true} className={navigationMenuTriggerStyle()}>Home</Link>
                   
                 </NavigationMenuItem>
             </NavigationMenuList>

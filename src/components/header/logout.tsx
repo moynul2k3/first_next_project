@@ -28,7 +28,7 @@ export default function SigninSignup() {
 			if (response.ok) {
 				document.cookie = `access=; path=/;`;
 				document.cookie = `refresh=; path=/;`;
-				router.push("/home");
+				router.push("/");
 				return router.refresh();
 			};
 		} catch (error) {

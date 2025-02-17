@@ -12,7 +12,7 @@ export async function middleware(request: NextRequest) {
     const refreshToken = request.cookies.get('refresh')?.value || '';
     const url = new URL(request.url);
     const prevHeader = request.headers.get('referer');
-    const prevUrl = prevHeader ? new URL(prevHeader, request.nextUrl.origin) : new URL('/home', request.nextUrl.origin);
+    const prevUrl = prevHeader ? new URL(prevHeader, request.nextUrl.origin) : new URL('/', request.nextUrl.origin);
     const response = NextResponse.next();
 
     try {

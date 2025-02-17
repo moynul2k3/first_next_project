@@ -16,10 +16,10 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
 
     useEffect(() => {
             const handleScroll = () => {
-                setIsScrolled(window.scrollY > 200);
+                setIsScrolled(window.scrollY > 100);
             };
     
-            setIsScrolled(window.scrollY > 200);
+            setIsScrolled(window.scrollY > 100);
             window.addEventListener("scroll", handleScroll);
             return () => {
                 window.removeEventListener("scroll", handleScroll);
