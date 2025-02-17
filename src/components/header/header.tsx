@@ -11,7 +11,7 @@ import MyCart from './myCart'
 export default async function Header() {
 	return (
 		<Headerbg >
-			<header className='h-16 max-md:px-4 md:px-8 lg:px-20 xl:px-32 flex justify-between items-center gap-5 border-b-[1px] border-black/10'>
+			<header className='h-20 max-md:px-4 md:px-8 lg:px-20 xl:px-32 flex justify-between items-center gap-5 border-b-[1px] border-black/10'>
 				<Link href="/home" className="h-full w-auto flex justify-start items-center gap-1">
 					<Image
 						src="/quanta.png"
