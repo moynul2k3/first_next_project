@@ -29,14 +29,9 @@ export default function SigninSignup() {
 
   return (
     <div>
-        {/*{ loading?(
-            <div>Loading...</div>
-        ) : (
-            <button onClick={handleOpenPopup}>Signin/Signup</button>
-        )}*/}
       <button onClick={ handleOpenPopup }>
-        <span className="max-md:hidden">Signin / Signup</span>
-        <span className="text-xl text-inherit max-md:block md:hidden"><i className='bx bx-user'></i></span>
+        <span className="max-xl:hidden">Signin / Signup</span>
+        <span className="text-xl text-inherit xl:hidden"><i className='bx bx-user h-full w-full flex justify-center items-center'></i></span>
       </button>
     </div>
   );

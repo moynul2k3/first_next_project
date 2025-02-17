@@ -7,7 +7,7 @@ export default async function isAuthentication() {
 	const isLoggedIn = await isAuthenticated();
 
 	return (
-		<div className=" flex justify-center items-center gap-2 bg-red-500 text-white hover:bg-red-700 max-md:w-8 md:w-36 max-md:h-8  md:h-10 rounded max-md:rounded-full ">
+		<div className=" flex justify-center items-center gap-2 bg-red-500 text-white hover:bg-red-700 max-md:w-8 md:w-10 xl:w-36 max-md:h-8  md:h-10 rounded max-xl:rounded-full ">
             { !isLoggedIn
                 ? <SigninSignup  />
 				:   <div className={`w-full px-2 py-1 flex flex-col justify-center items-center relative group  rounded-md`}>

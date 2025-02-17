@@ -61,7 +61,7 @@ const ProductCarousel = ({ Products }: CarouselProps) => {
                 )
                 : (
                     <div className=" mt-1 py-5 pb-10 w-full">
-                        <ul className=" h-auto w-full grid max-md:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 max-md:gap-2 max-md:gap-y-4 md:gap-3 xl:gap-5">
+                        <ul className=" h-auto w-full grid max-md:grid-cols-2 max-xl:grid-cols-3 xl:grid-cols-5 gap-2 max-md:gap-y-4 md:gap-y-3 xl:gap-y-5">
 							{ Products.map((Product) => (
 								<div key={Product.id}>
                                 <li  className="max-md:w-[180px] md:w-[300px] relative max-xl:rounded-md xl:rounded-xl overflow-hidden shadow-[-1px_0px_5px_#f002,1px_0px_5px_#0004] hover:shadow-[-1px_0px_5px_#f00,1px_0px_5px_#f005] transition-shadow duration-300 swiper-slide max-md:pb-3 md:pb-3 lg:pb-5">

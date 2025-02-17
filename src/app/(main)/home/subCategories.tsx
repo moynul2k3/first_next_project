@@ -7,7 +7,7 @@ export default async function subCategories() {
 	const subCategory = subCategoryData.map((subCat) =>  ({
 		id: subCat.id,
 		name: subCat.name,
-		image: subCat.image,
+		image: subCat.image? subCat.image : "/quanta.png",
 	}));
 
 

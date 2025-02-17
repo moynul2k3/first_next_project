@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from "./hero"
 import SubCategories from "./subCategories"
-import TopSales from "./topSales"
+import TopSales from "./popularProducts"
 import OurProducts from "./ourProducts"
 export default async function Home() {
   return (

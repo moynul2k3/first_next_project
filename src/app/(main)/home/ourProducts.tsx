@@ -7,7 +7,7 @@ export default async function topSales() {
 	const Products = productsData.map((product) =>  ({
 		id: product.id,
 		name: product.name,
-		image: product.image,
+		image: product.image? product.image : "/quanta.png",
 	}));
 
 	return (

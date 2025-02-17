@@ -64,15 +64,15 @@ export default async function Categories() {
             </NavigationMenuList>
         </NavigationMenu>*/}
 
-      <NavigationMenu>
-          <Carousel className="w-[600px] me-16">
+      <NavigationMenu className="">
+          <Carousel className=" me-16 w-[600px] max-xl:px-4">
             <NavigationMenuList >
               <CarouselContent className="" >
                 {categories.map((category: { id: number; name: string; subcategories: { id: number; name: string; image: string }[] }) => (
                     <CarouselItem id="categoryItem" key={category.id} className="basis-auto">
                       <NavigationMenuItem >
                           <NavigationMenuTrigger className="select-none ">{category.name}</NavigationMenuTrigger>
-                            <NavigationMenuContent>
+                            <NavigationMenuContent className="w-[800px]">
                               <div  className="p-5" style={navCategoriesStyle}>
                                   {category.subcategories.map((subcat) => (
                                       <Link href="/" key={subcat.id} className="flex justify-center items-center flex-col">

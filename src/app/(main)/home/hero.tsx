@@ -23,16 +23,16 @@ export default async function hero() {
 			<div className='max-md:h-8 md:h-10 w-full max-md:px-4 md:px-8 lg:px-20 xl:px-32 max-md:hidden'>
 				<div className='bg-white h-full w-full rounded-b-xl flex justify-evenly items-center divide-x-2 divide-red-600 overflow-hidden '>
 					<Link href="/products" className='flex-1 h-full flex justify-center items-center transition-all ease-in-out duration-300 hover:bg-red-200 hover:underline group'>
-						<span className='py-1 px-2'>Our Products</span>
+						<span className='py-1 px-2'>All Products</span>
 					</Link>
 					<Link href="/products" className='flex-1 h-full flex justify-center items-center transition-all ease-in-out duration-300 hover:bg-red-200 hover:underline group'>
-						<span className='py-1 px-2'>Our Products</span>
+						<span className='py-1 px-2'>Best Sales</span>
 					</Link>
 					<Link href="/products" className='flex-1 h-full flex justify-center items-center transition-all ease-in-out duration-300 hover:bg-red-200 hover:underline group'>
-						<span className='py-1 px-2'>Our Products</span>
+						<span className='py-1 px-2'>Supper Offer Deals</span>
 					</Link>
 					<Link href="/products" className='flex-1 h-full flex justify-center items-center transition-all ease-in-out duration-300 hover:bg-red-200 hover:underline group'>
-						<span className='py-1 px-2'>Our Products</span>
+						<span className='py-1 px-2'>new Arrival</span>
 					</Link>
 				</div>
 			</div>
