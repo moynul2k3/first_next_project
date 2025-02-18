@@ -12,7 +12,6 @@ const nextConfig: NextConfig = {
           {
             protocol: "https",
             hostname: "admin.dot95bd.com",
-            // hostname: "first-next-project-smoky.vercel.app",
           },
         ]
       : [

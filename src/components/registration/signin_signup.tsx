@@ -205,7 +205,7 @@ const SigninSignup: React.FC<SigninSignupProps> = ({onClose}) => {
     };
 
     return (
-        <div className="h-full max-md:w-screen max-md:pt-5 xl:p-5 flex-1 bg-red-400/20 relative">
+        <div className="h-full max-md:w-screen max-md:pt-5 xl:p-5 flex-1 bg-gradient_bg relative text-white ">
             <form onSubmit={handleSubmit} className="px-5">
                 <div className="flex justify-between items-center md:mt-10">
                     <div className="text-xl font-semibold">
@@ -285,14 +285,14 @@ const SigninSignup: React.FC<SigninSignupProps> = ({onClose}) => {
                 </div>
                 <div>
                     {isUserExists === null && (
-                        <div className="text-sm mt-2 text-black/40">
+                        <div className="text-sm mt-2 text-white ">
                             We`ll check if you have an account, and help create one if you don`t.
                         </div>
                     )}
                 </div>
 
                 <div className="relative mt-5">
-                    <label htmlFor="email" className="text-[#0009] relative text-sm">
+                    <label htmlFor="email" className="text-[#fff] relative text-sm">
                         Email :
                     </label>
                     <div className="bg-white/80 rounded my-1">
@@ -314,7 +314,7 @@ const SigninSignup: React.FC<SigninSignupProps> = ({onClose}) => {
 
                 {forgot_password && !verify_otp && (
                     <div className={`${send_otp === true ? "" : "pointer-events-none opacity-25"} relative mt-5 `}>
-                        <label htmlFor="otp" className="text-[#0009] relative text-sm flex justify-between items-center">
+                        <label htmlFor="otp" className="text-[#fff] relative text-sm flex justify-between items-center">
                             <div>Enter OTP:</div>
                             {isRunning && (
                                 <div>
@@ -344,7 +344,7 @@ const SigninSignup: React.FC<SigninSignupProps> = ({onClose}) => {
                                     value={digit}
                                     onChange={(e) => handleOtpChange(e.target.value, index)}
                                     onKeyDown={(e) => handleOtpKeyDown(e, index)}
-                                    className="w-10 h-10 text-center text-lg border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                                    className="w-10 h-10 text-center text-lg border border-gray-300 rounded focus:outline-none focus:border-black/20"
                                 />
                             ))}
                         </div>
@@ -353,7 +353,7 @@ const SigninSignup: React.FC<SigninSignupProps> = ({onClose}) => {
 
                 {(isUserExists !== null) && !((forgot_password || send_otp) && !verify_otp) && (
                     <div className="relative mt-2">
-                        <label htmlFor="password" className="text-[#0009] relative text-sm">
+                        <label htmlFor="password" className="text-[#fff] relative text-sm">
                             Password :
                         </label>
                         <div className="bg-white/80 rounded my-1 relative">
@@ -380,7 +380,7 @@ const SigninSignup: React.FC<SigninSignupProps> = ({onClose}) => {
                 )}
                 {(isUserExists === false || verify_otp === true) && (
                     <div className="relative mt-2">
-                        <label htmlFor="password" className="text-[#0009] relative text-sm">
+                        <label htmlFor="password" className="text-[#fff] relative text-sm">
                             Confirm Password :
                         </label>
                         <div className="bg-white/80 rounded my-1 relative">
@@ -407,7 +407,7 @@ const SigninSignup: React.FC<SigninSignupProps> = ({onClose}) => {
                 )}
                 <button
                     type="submit"
-                    className="mt-5 px-3 bg-[#f004] hover:bg-[#f007] w-full h-10 text-[#000] rounded"
+                    className="mt-5 px-3 bg-white hover:bg-[#ffffffb6] w-full h-10 text-[#000] rounded transition-all ease-in-out duration-150"
                     disabled={loading}
                 >
                     {loading
@@ -432,7 +432,7 @@ const SigninSignup: React.FC<SigninSignupProps> = ({onClose}) => {
                         or
                         <hr className="h-[2px] bg-black/40 w-full" />
                     </div>
-                    <button className="mt-4 px-3 bg-[#fff] hover:bg-[#ffffffb6] w-full h-10 text-[#000] border-none focus:border-none focus:outline-none focus:ring-0 rounded peer text-sm flex justify-center items-center gap-5" >
+                    <button className="mt-4 px-3 bg-[#fff] hover:bg-[#ffffffb6] w-full h-10 text-[#000] border-none focus:border-none focus:outline-none focus:ring-0 rounded peer text-sm flex justify-center items-center gap-5 transition-all ease-in-out duration-150" >
                         <i className='bx bxl-google text-2xl '></i>
                         Continue with Google
                     </button>

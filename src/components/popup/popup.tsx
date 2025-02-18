@@ -10,7 +10,7 @@ const Popup: React.FC<PopupProps> = ({ isVisible, onClose, children }) => {
     } else {
         return (
         <div className="fixed top-0 left-0 h-screen w-screen flex justify-center max-md:items-end  md:items-center bg-black/10 backdrop-blur-sm z-50">
-            <div className="w-auto h-auto bg-white rounded shadow-slate-400 shadow-md relative max-md:flex max-md:justify-center ">
+            <div className="w-auto h-auto bg-white rounded shadow-[#c940de] shadow-md relative max-md:flex max-md:justify-center ">
             {/* Close Button */}
             <button
                 onClick={onClose} // Trigger onClose when clicked

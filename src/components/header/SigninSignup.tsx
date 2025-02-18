@@ -31,7 +31,9 @@ export default function SigninSignup() {
     <div>
       <button onClick={ handleOpenPopup }>
         <span className="max-xl:hidden">Signin / Signup</span>
-        <span className="text-xl text-inherit xl:hidden"><i className='bx bx-user h-full w-full flex justify-center items-center'></i></span>
+        <span className="text-xl text-inherit xl:hidden flex justify-center items-center">
+          <i className='bx bx-user text-2xl'></i>
+        </span>
       </button>
     </div>
   );

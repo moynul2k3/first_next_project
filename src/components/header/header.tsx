@@ -11,14 +11,14 @@ import MyCart from './myCart'
 export default async function Header() {
 	return (
 		<Headerbg >
-			<header className='h-20 max-md:px-4 md:px-8 lg:px-20 xl:px-32 flex justify-between items-center gap-5 border-b-[1px] border-black/10'>
+			<header className='max-md:h-14 md:h-20 max-md:px-4 md:px-8 lg:px-20 xl:px-32 flex justify-between items-center gap-5 border-b-[1px] border-black/10'>
 				<Link href="/" className="h-full w-auto flex justify-start items-center gap-1">
 					<Image
 						src="/quanta.png"
 						alt="Vercel logomark"
 						width={100}
 						height={100}
-						className='h-14 w-14'
+						className='max-md:h-10 md:h-12 xl:h-14 max-md:w-10 md:w-12 xl:w-14'
 					/>
 					<div className='w-full flex justify-center items-start flex-col gap-0 text-inherit max-md:hidden'>
 						<p className='md:text-2xl xl:text-3xl font-bold'>DOT 95</p>
