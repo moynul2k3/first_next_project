@@ -59,10 +59,10 @@ const config: Config = {
                 'sm': '460px',
                 // => @media (min-width: 640px) { ... }
 
-                'md': '720px',
+                'md': '820px',
                 // => @media (min-width: 640px) { ... }
 
-                'lg': '1080px',
+                'lg': '1180px',
                 // => @media (min-width: 1024px) { ... }
 
                 'xl': '1380px',

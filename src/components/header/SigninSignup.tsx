@@ -29,7 +29,7 @@ export default function SigninSignup() {
 
   return (
     <div>
-      <button onClick={ handleOpenPopup }>
+      <button onClick={ handleOpenPopup } className="hover:opacity-85">
         <span className="max-xl:hidden">Signin / Signup</span>
         <span className="text-xl text-inherit xl:hidden flex justify-center items-center">
           <i className='bx bx-user text-2xl'></i>
