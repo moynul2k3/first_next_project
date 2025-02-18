@@ -313,18 +313,18 @@ const SigninSignup: React.FC<SigninSignupProps> = ({onClose}) => {
                 </div>
 
                 {forgot_password && !verify_otp && (
-                    <div className={`${send_otp === true ? "" : "pointer-events-none opacity-25"} relative mt-5 `}>
+                    <div className={`${send_otp === true ? "" : "pointer-events-none opacity-25"} relative mt-5 text-black`}>
                         <label htmlFor="otp" className="text-[#fff] relative text-sm flex justify-between items-center">
                             <div>Enter OTP:</div>
                             {isRunning && (
                                 <div>
                                     {timeLeft > 0 ? (
                                         <div>
-                                            Remaining: <span className="text-red-500">{formatTime(timeLeft)}</span>
+                                            Remaining: <span className="text-white">{formatTime(timeLeft)}</span>
                                         </div>
                                     ) : (
                                         <div>
-                                            <span className="text-red-500">Times up</span>
+                                            <span className="text-white">Times up</span>
                                         </div>
                                     )}
                                 </div>
@@ -344,7 +344,7 @@ const SigninSignup: React.FC<SigninSignupProps> = ({onClose}) => {
                                     value={digit}
                                     onChange={(e) => handleOtpChange(e.target.value, index)}
                                     onKeyDown={(e) => handleOtpKeyDown(e, index)}
-                                    className="w-10 h-10 text-center text-lg border border-gray-300 rounded focus:outline-none focus:border-black/20"
+                                    className="w-10 h-10 text-center text-lg border border-gray-300 rounded focus:outline-none focus:border-2 focus:border-black/20"
                                 />
                             ))}
                         </div>
@@ -439,12 +439,12 @@ const SigninSignup: React.FC<SigninSignupProps> = ({onClose}) => {
                 </div>
             )}
             {successMessage && (
-                <div className="text-green-700  absolute bottom-9 left-0 w-full px-5">
+                <div className="text-white  absolute bottom-9 left-0 w-full px-5">
                     <p className="text-center text-sm">{successMessage}</p>
                 </div>
             )}
             {errorMessage && (
-                <div className="text-red-600  absolute bottom-9 left-0 w-full px-5">
+                <div className="text-white  absolute bottom-9 left-0 w-full px-5">
                     <p className="text-center text-sm">{errorMessage}</p>
                 </div>
             )}
