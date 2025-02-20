@@ -25,8 +25,8 @@ export default async function isAuthentication() {
                                 <p className="font-thin line-clamp-1 text-md">My account</p>
                             </div>
                         </div>
-                        <div className={`absolute hidden group-hover:block h-80 w-72 transition-all ease-in-out duration-100 md:-top-3 max-md:-top-6 max-lg:right-0  z-40 `}>
-                            <div className={`profile h-full mt-[70px] w-full bg-[#fff] text-black/70 shadow-black/10 shadow-md border-[1px] border-black/10 rounded-md px-5 py-5 flex flex-col gap-6 `}>
+                        <div className={`absolute hidden group-hover:block h-80 w-72 transition-all ease-in-out duration-100 top-6 max-md:top-11 max-lg:right-0 z-40 `}>
+                            <div className={`profile h-full md:mt-[30px] max-md:top-[20px] w-full bg-[#fff] text-black/70 shadow-black/10 shadow-md border-[1px] border-black/10 rounded-md px-5 py-5 flex flex-col gap-6 `}>
                                 <Link href="" className={`flex justify-start items-center gap-3  group/item`}>
                                     <i className='bx bx-smile text-[25px] font-thin'></i> 
                                     <p className="text-sm group-hover/item:underline group-hover/item:text-[#f008] font-semibold">Manage My Account</p>
