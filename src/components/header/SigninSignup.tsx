@@ -24,7 +24,7 @@ export default function SigninSignup() {
       const currentParams = new URLSearchParams(searchParams.toString());
       currentParams.set("user", "_authentication-required");
       const newUrl = `${window.location.pathname}?${currentParams.toString()}`;
-      router.push(newUrl);
+      router.push(newUrl);  
   };
 
   return (
