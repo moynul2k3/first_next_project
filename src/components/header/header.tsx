@@ -5,6 +5,7 @@ import Image from 'next/image';
 import AuthUser from "./userRegistration"
 import SearchBar from "../searchBar/headerSearchBar"
 import Headerbg from "./index"
+import CategoriesWrapper from './categoriesWrapper';
 import Categories from './Categories';
 import MyCart from './myCart'
 
@@ -33,7 +34,9 @@ export default async function Header() {
 					<MyCart  />
 				</div>
 			</header>
-			<Categories />
+			<CategoriesWrapper>
+				<Categories />
+			</CategoriesWrapper>
 		</Headerbg>
 	)
 }

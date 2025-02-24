@@ -3,7 +3,7 @@ import ProductItem from "@/utils/products/products"
 import { fetchProducts, Products } from "@/lib/fetchData/fetchData";
 
 export default async function topSales() {
-	const productsData: Products[] = await fetchProducts();
+	const productsData: Products[] = await fetchProducts(null);
 	const Products = productsData.map((product) =>  ({
 		id: product.id,
 		name: product.name,

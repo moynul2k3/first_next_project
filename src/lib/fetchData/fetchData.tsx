@@ -37,18 +37,33 @@ export async function fetchBanners() {
 
 
 // Helper function to fetch products data
-export async function fetchProducts() {
-    const response = await fetch(`${API_URL}/all_products/`, {
-        cache: "force-cache",
+//export async function fetchProducts() {
+//    const response = await fetch(`${API_URL}/products/`, {
+//        cache: "force-cache",
+//        next: { revalidate: 30 },
+//    });
+//    if (!response.ok) {
+//        throw new Error("Failed to fetch products");
+//    }
+//    // const data: Products[] = await response.json();
+//    // return data;
+//    return response.json();
+//};
+
+
+export async function fetchProducts(subcategories: number[] | null) {
+    const subcategoryQuery = subcategories && subcategories.length > 0 ? subcategories.join(",") : "";
+    const response = await fetch(`${API_URL}/products/?subcategories=${subcategoryQuery}`, {
         next: { revalidate: 30 },
     });
+
     if (!response.ok) {
         throw new Error("Failed to fetch products");
     }
-    // const data: Products[] = await response.json();
-    // return data;
+
     return response.json();
-};
+}
+
 
 
 export async function fetchSubCategories() {

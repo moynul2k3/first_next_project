@@ -29,7 +29,7 @@ const ProductCarousel = ({ Products }: CarouselProps) => {
         <section className="w-full">
             { loading
                 ? (
-                    <ul className=" h-auto w-full grid max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4 xl:grid-cols-5 gap-2 max-md:gap-y-4 md:gap-y-3 xl:gap-y-5">
+                    <ul className={`h-auto w-full grid max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4 xl:grid-cols-5 gap-2 max-md:gap-y-4 md:gap-y-3 xl:gap-y-5`}>
 						{ Array.from({ length: 20 }).map((_, index) => (
 						<div key={index}>
                             <div  className="bg-black/10 relative max-xl:rounded-md xl:rounded-xl overflow-hidden shadow-[-1px_0px_5px_#f002,1px_0px_5px_#0004] hover:shadow-[-1px_0px_5px_#CC1554,1px_0px_5px_#6A4385] transition-shadow duration-300 swiper-slide  max-md:pb-1 md:pb-2">

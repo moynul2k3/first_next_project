@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import { usePathname } from "next/navigation";
 
 type SearchBarProps = {
     onSearch?: (query: string) => void;
@@ -7,6 +8,7 @@ type SearchBarProps = {
 export default function SearchBar({ onSearch }: SearchBarProps) {
     const [query, setQuery] = useState<string>("");
     const [isScrolled, setIsScrolled] = useState(false);
+    const pathname = usePathname();
 
     const handleSearch = (e: React.FormEvent) => {
         if (!onSearch) return;
@@ -26,7 +28,7 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
             };
     }, []);
     
-    if (!isScrolled) {
+    if (!isScrolled && pathname === "/") {
         return null;
     }
 
