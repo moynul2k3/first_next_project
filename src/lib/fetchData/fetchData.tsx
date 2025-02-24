@@ -51,9 +51,11 @@ export async function fetchBanners() {
 //};
 
 
-export async function fetchProducts(subcategories: number[] | null) {
-    const subcategoryQuery = subcategories && subcategories.length > 0 ? subcategories.join(",") : "";
-    const response = await fetch(`${API_URL}/products/?subcategories=${subcategoryQuery}`, {
+export async function fetchProducts(subcategories?: number[] | null) {
+    const subcategoryQuery = subcategories && subcategories.length > 0 ? `subcategories=${subcategories.join(",")}` : "";
+    const url = `${API_URL}/products/${subcategoryQuery ? `?${subcategoryQuery}` : ""}`;
+
+    const response = await fetch(url, {
         next: { revalidate: 30 },
     });
 
@@ -63,6 +65,7 @@ export async function fetchProducts(subcategories: number[] | null) {
 
     return response.json();
 }
+
 
 
 
