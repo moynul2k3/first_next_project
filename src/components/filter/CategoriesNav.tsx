@@ -73,8 +73,8 @@ const CategoriesNav: React.FC<CategoriesNavProps> = ({ show, onClose, setSubcate
       }`}
     >
 	  <aside className="w-full px-4 pb-24 h-full overflow-y-auto shadow-md">
-		  <div className="flex justify-between items-center">
-			  <h2 className="text-lg font-semibold sticky top-0 left-0 bg-white py-4 z-40">Shop By Category</h2>
+		  <div className="flex justify-between items-center pt-5 pb-2">
+			  <h2 className="text-md font-semibold sticky top-0 left-0 bg-white z-40">Shop By Category</h2>
 			  <button
 		        onClick={onClose}
 		        className="text-xs font-semibold"
