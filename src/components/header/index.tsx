@@ -18,7 +18,7 @@ export default function HeaderBg({children}: HeaderProps) {
 			};
 	}, [])
 	return (
-		<div id='Headerbg' className={ `${ isScrolled || pathname !== "/" ? "bg-white text-black shadow-md shadow-black/10" : "bg-gradient-to-b from-black/70 to-transparent text-white" } Headerbg fixed top-0 w-full h-auto transition-all duration-100 z-40 ` }>
+		<div id='Headerbg' className={ `${ isScrolled || pathname !== "/" ? "bg-white text-black " : "bg-gradient-to-b from-black/70 to-transparent text-white" } Headerbg fixed top-0 w-full h-auto transition-all duration-100 z-40 ` }>
 			{ children }
 		</div>
 	);

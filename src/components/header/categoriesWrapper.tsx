@@ -6,9 +6,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   return (
-    <div>
+    <div className="max-md:hidden">
       {pathname === "/"?<div>{children}</div> : ""}
-      
     </div>
   );
 }

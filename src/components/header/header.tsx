@@ -34,7 +34,7 @@ export default async function Header() {
 					<MyCart  />
 				</div>
 			</header>
-			<CategoriesWrapper>
+			<CategoriesWrapper >
 				<Categories />
 			</CategoriesWrapper>
 		</Headerbg>

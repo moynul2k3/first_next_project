@@ -10,13 +10,15 @@ interface Products {
     id: number;
     name: string;
     image: string;
+    price: number;
 }
 
-interface CarouselProps {
+interface productsProps {
     Products: Products[];
+    ClassName: string;
 }
 
-const ProductCarousel = ({ Products }: CarouselProps) => {
+const ProductCarousel = ({ Products, ClassName }: productsProps) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -64,7 +66,7 @@ const ProductCarousel = ({ Products }: CarouselProps) => {
                 )
                 : (
                     <div className=" mt-1 py-5 pb-10 w-full">
-                        <ul className=" h-auto w-full grid max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4 xl:grid-cols-5 gap-2 max-md:gap-y-4 md:gap-y-3 xl:gap-y-5">
+                        <ul className={` h-auto w-full ${ClassName}`}>
 							{ Products.map((Product) => (
 								<div key={Product.id}>
                                     <li  className=" relative max-xl:rounded-md xl:rounded-xl overflow-hidden shadow-[-1px_0px_5px_#f002,1px_0px_5px_#0004] hover:shadow-[-1px_0px_5px_#CC1554,1px_0px_5px_#6A4385] transition-shadow duration-300 swiper-slide  max-md:pb-1 md:pb-2">
@@ -82,7 +84,7 @@ const ProductCarousel = ({ Products }: CarouselProps) => {
                                                     <p className="max-xl:text-[10px] xl:text-[12px] font-semibold flex justify-center items-center">
                                                         <del className=""><span className="noto_sans">৳</span>800</del>&nbsp;&nbsp;&nbsp;
                                                         <span className="noto_sans max-md:text-[14px] md:text-[20px]">৳</span>&nbsp;
-                                                        <span className="max-md:text-[12px] md:text-[16px]">400</span>
+                                                        <span className="max-md:text-[12px] md:text-[16px]">{Product.price}</span>
                                                     </p>
                                                 </div>
                                             </div>

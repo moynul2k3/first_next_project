@@ -57,7 +57,7 @@ const SideNav: React.FC<{ onFilterChange: (selected: string[]) => void }> = ({ o
   }, [selectedSubcategories, onFilterChange]);
 
   return (
-    <aside className="w-64 px-4 bg-white h-full overflow-y-auto sideNav shadow-md shadow-black/10 transition-all ease-in-out duration-200 ">
+    <aside className="max-lg:hidden w-64 px-4 bg-white h-full overflow-y-auto sideNav shadow-md shadow-black/10 transition-all ease-in-out duration-200 ">
       <h2 className="text-lg font-semibold mb-3 sticky  top-0 left-0 bg-white py-4 z-40">Shop By Category</h2>
 
       {loading && <p>Loading categories...</p>}
@@ -71,7 +71,7 @@ const SideNav: React.FC<{ onFilterChange: (selected: string[]) => void }> = ({ o
           <div key={category.id} className="mb-2 ">
             <button
               onClick={() => toggleCategory(category.id)}
-              className="w-full text-left font-medium flex justify-start items-center gap-3 px-2"
+              className={` w-full text-left font-medium flex justify-start items-center gap-3 px-2`}
             >
               
               <span>
