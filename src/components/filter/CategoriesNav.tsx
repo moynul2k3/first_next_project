@@ -68,8 +68,8 @@ const CategoriesNav: React.FC<CategoriesNavProps> = ({ show, onClose, setSubcate
 
   return (
     <div
-      className={`h-[100vh] w-screen fixed bottom-0 left-0 bg-white shadow-lg transition-transform duration-300 ease-in-out z-50 ${
-        show ? "translate-y-[5.5rem]" : "translate-y-full"
+      className={`h-[100vh] w-screen fixed top-14 left-0 bg-white shadow-lg transition-transform duration-300 ease-in-out z-50 ${
+        show ? "translate-y-0" : "translate-y-full"
       }`}
     >
 	  <aside className="w-full px-4 pb-24 h-full overflow-y-auto shadow-md">
