@@ -65,7 +65,7 @@ const ProductCarousel = ({ Products, ClassName }: productsProps) => {
                     </ul>
                 )
                 : (
-                    <div className=" mt-1 py-5 pb-10 w-full">
+                    <div className=" mt-1 py-5 pb-24 w-full">
                         <ul className={` h-auto w-full ${ClassName}`}>
 							{ Products.map((Product) => (
 								<div key={Product.id}>
