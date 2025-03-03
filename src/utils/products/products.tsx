@@ -28,7 +28,7 @@ const ProductCarousel = ({ Products, ClassName }: productsProps) => {
     }, [Products]);// Re-run effect when `Products` data changes
 
     return (
-        <section className="w-full">
+        <section className="w-full pb-28">
             { loading
                 ? (
                     <ul className={`h-auto w-full grid max-md:grid-cols-2 max-lg:grid-cols-3 max-xl:grid-cols-4 xl:grid-cols-5 gap-2 max-md:gap-y-4 md:gap-y-3 xl:gap-y-5`}>
@@ -65,7 +65,7 @@ const ProductCarousel = ({ Products, ClassName }: productsProps) => {
                     </ul>
                 )
                 : (
-                    <div className=" mt-1 py-5 pb-28 w-full">
+                    <div className=" mt-1 py-5  w-full">
                         <ul className={` h-auto w-full ${ClassName}`}>
 							{ Products.map((Product) => (
 								<div key={Product.id}>

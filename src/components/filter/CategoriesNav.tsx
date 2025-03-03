@@ -72,14 +72,14 @@ const CategoriesNav: React.FC<CategoriesNavProps> = ({ show, onClose, setSubcate
         show ? "translate-y-0" : "translate-y-full"
       }`}
     >
-	  <aside className="w-full px-4 pb-24 h-full overflow-y-auto shadow-md">
+	  <aside className="w-full px-4 pb-28 h-full overflow-y-auto shadow-md">
 		  <div className="flex justify-between items-center pt-5 pb-2">
 			  <h2 className="text-md font-semibold sticky top-0 left-0 bg-white z-40">Shop By Category</h2>
 			  <button
 		        onClick={onClose}
 		        className="text-xs font-semibold"
 			      >
-			        ✕ Close
+			        Done
 		      </button>
 		  </div>
         
