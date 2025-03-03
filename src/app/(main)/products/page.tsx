@@ -4,7 +4,8 @@ import SideNav from "@/components/filter/sideNav";
 import TopNav from "@/components/filter/topNav";
 import { fetchProducts, Products } from "@/lib/fetchData/fetchData";
 import ProductItem from "@/utils/products/products";
-import { Skeleton } from "@/components/ui/skeleton"
+import { Skeleton } from "@/components/ui/skeleton";
+import BottomNav from "@/components/filter/bottomSearchNav"
 
 const ProductsPage = () => {
   const [loading, setLoading] = useState(true);
@@ -53,6 +54,7 @@ const ProductsPage = () => {
       <SideNav onFilterChange={setSubcategories} />
       <main className="flex-1 p-4 overflow-y-auto">
         <TopNav sortOrder={ sortOrder } setSortOrder={ setSortOrder } setSubcategories={ setSubcategories } />
+
         { loading?(
             <ul className={`h-auto w-full grid max-md:grid-cols-2 max-lg:grid-cols-3 lg:grid-cols-4 gap-2 max-md:gap-y-4 md:gap-y-3 xl:gap-y-5`}>
 						{ Array.from({ length: 20 }).map((_, index) => (
@@ -97,6 +99,9 @@ const ProductsPage = () => {
           }
 
       </main>
+      <div className="absolute px-4 bottom-12 right-0 w-full z-50 bg-white pt-2 pb-5">
+        <BottomNav  />
+      </div>
     </div>
   );
 };

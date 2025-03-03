@@ -17,11 +17,11 @@ export default function TopNav({ sortOrder, setSortOrder, setSubcategories  }: T
 
   return (
     <>
-      <nav className="px-4 flex justify-between items-center gap-3 text-xs md:hidden fixed top-14 left-0 bg-white z-40 w-full h-8 border-b-[1px] border-black/10">
+      <nav className="px-4 flex justify-between items-center gap-3 text-xs max-md:fixed top-14 left-0 bg-white z-40 w-full h-8 border-b-[1px] border-black/10">
         <div className="flex justify-start items-center gap-3 text-xs">
           <button
             onClick={() => setShowCategories((prev) => !prev)}
-            className="px-2 py-1 rounded focus:bg-red-500/10"
+            className="px-2 py-1 rounded focus:bg-red-500/10 md:hidden"
           >
             <i className="bx bx-filter-alt"></i> Categories
           </button>
