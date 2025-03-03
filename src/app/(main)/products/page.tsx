@@ -99,7 +99,7 @@ const ProductsPage = () => {
           }
 
       </main>
-      <div className="absolute md:hidden px-4 bottom-24 right-0 w-full z-50 bg-white pt-2 pb-5 border-t-[1px] border-black/10">
+      <div className="absolute md:hidden px-4 bottom-28 right-0 w-full z-50 bg-white pt-2 pb-5 border-t-[1px] border-black/10">
         <BottomNav  />
       </div>
     </div>
