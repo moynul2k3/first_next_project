@@ -52,7 +52,7 @@ const ProductsPage = () => {
   return (
     <div className="flex max-md:mt-14  md:pt-20 h-screen w-full fixed top-0 left-0 max-md:px-0 md:px-0 lg:px-20 xl:px-32">
       <SideNav onFilterChange={setSubcategories} />
-      <main className="flex-1 p-4 overflow-y-auto">
+      <main className="flex-1 p-4 overflow-y-auto pb-20">
         <TopNav sortOrder={ sortOrder } setSortOrder={ setSortOrder } setSubcategories={ setSubcategories } />
 
         { loading?(
