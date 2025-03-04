@@ -38,7 +38,7 @@ const ProductCarousel = ({ Products }: CarouselProps) => {
             gap: "1rem",
             drag: 'free',
             focus: 'center',
-            pagination: true,
+            pagination: false,
             autoWidth: true,
             autoHeight: false,
             autoScroll: {

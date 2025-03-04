@@ -1,16 +1,28 @@
-"use client"
-import React, {useState } from 'react'
+"use client";
+import React, { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
-type SearchBarProps = {
-    onSearch?: (query: string) => void;
-};
-export default function SearchBar({ onSearch }: SearchBarProps) {
+
+export default function SearchBar() {
     const [query, setQuery] = useState<string>("");
 
+    const router = useRouter();
+    const searchParams = useSearchParams();
+
+    useEffect(() => {
+        const currentQuery = searchParams.get("q") || "";
+        setQuery(currentQuery);
+    }, [searchParams]);
+    
     const handleSearch = (e: React.FormEvent) => {
-        if (!onSearch) return;
         e.preventDefault();
-        onSearch(query);
+        const trimmedQuery = query.trim();
+
+        if (trimmedQuery) {
+            router.push(`/products?q=${encodeURIComponent(trimmedQuery)}`);
+        } else {
+            router.push(`/products`); // Removes searchParams when empty
+        }
     };
     return (
         <div className="flex justify-center max-xl:w-full md:w-2/3 xl:w-1/2 h-full max-h-12  shadow-sm bg-white rounded-full overflow-hidden">

@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import SideNav from "@/components/filter/sideNav";
 import TopNav from "@/components/filter/topNav";
 import { fetchProducts, Products } from "@/lib/fetchData/fetchData";
@@ -11,7 +12,11 @@ const ProductsPage = () => {
   const [loading, setLoading] = useState(true);
   const [subcategories, setSubcategories] = useState<string[]>([]);
   const [products, setProducts] = useState<Products[]>([]);
-   const [sortOrder, setSortOrder] = useState<"asc" | "desc" | null>(null); // Default: null (no sorting)
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc" | null>(null); // Default: null (no sorting)
+  const [filteredProducts, setFilteredProducts] = useState<Products[]>([]);
+
+  const searchParams = useSearchParams();
+  const searchQuery = searchParams.get("q") || ""; // Get search query from URL
 
   useEffect(() => {
       if (products.length > 0) {
@@ -47,7 +52,18 @@ const ProductsPage = () => {
     }
   };
   getProducts();
-}, [subcategories, sortOrder]); 
+  }, [subcategories, sortOrder]); 
+  
+  useEffect(() => {
+    if (searchQuery.trim() === "") {
+      setFilteredProducts(products);
+    } else {
+      const filtered = products.filter((product) =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setFilteredProducts(filtered);
+    }
+  }, [searchQuery, products]);
 
   return (
     <div className="flex max-md:mt-14  md:pt-20 h-screen w-full fixed top-0 left-0 max-md:px-0 md:px-0 lg:px-20 xl:px-32">
@@ -88,7 +104,7 @@ const ProductsPage = () => {
     					  </div>
             ))}
             </ul>
-          ): products.length > 0 ? <ProductItem Products={ products } ClassName="grid max-md:grid-cols-2 max-lg:grid-cols-3 lg:grid-cols-4 gap-2 max-md:gap-y-4 md:gap-y-3 xl:gap-y-5" />
+          ): filteredProducts.length > 0 ? <ProductItem Products={ filteredProducts } ClassName="grid max-md:grid-cols-2 max-lg:grid-cols-3 lg:grid-cols-4 gap-2 max-md:gap-y-4 md:gap-y-3 xl:gap-y-5" />
           : (
               <div className="h-full w-full flex justify-center items-center flex-col">
                 <i className='bx bx-search text-8xl text-center' ></i>
@@ -100,7 +116,7 @@ const ProductsPage = () => {
 
       </main>
       <div className="fixed md:hidden px-4 bottom-0 right-0 w-full z-50 bg-white pt-2 pb-5 border-t-[1px] border-black/10">
-        <BottomNav  />
+        <BottomNav />
       </div>
     </div>
   );
